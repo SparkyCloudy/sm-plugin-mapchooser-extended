@@ -7,3 +7,5 @@ release/
 *.smx
 plugins/
 .venv
+.sourceknight
+compile_report.json

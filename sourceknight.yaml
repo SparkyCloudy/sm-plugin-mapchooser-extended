@@ -1,0 +1,68 @@
+project:
+  sourceknight: 0.6
+  name: mapchooser_extended
+  dependencies:
+    - name: sourcemod
+      type: smdrop
+      version: 1.12
+      unpack:
+        - source: /addons
+          dest: /addons
+
+    - name: multicolors
+      type: git
+      repo: https://github.com/srcdslab/sm-plugin-MultiColors
+      unpack:
+        - source: /addons
+          dest: /addons
+
+    - name: afkmanager
+      type: git
+      repo: https://github.com/srcdslab/sm-plugin-AFKManager
+      unpack:
+        - source: /addons/sourcemod/scripting/include
+          dest: /addons/sourcemod/scripting/include
+
+    - name: sourcecomms
+      type: git
+      repo: https://github.com/srcdslab/sourcebans-pp
+      unpack:
+        - source: /game/addons/sourcemod/scripting/include
+          dest: /addons/sourcemod/scripting/include
+
+    - name: playermanager
+      type: git
+      repo: https://github.com/srcdslab/sm-plugin-PlayerManager
+      unpack:
+        - source: /addons/sourcemod/scripting/include
+          dest: /addons/sourcemod/scripting/include
+
+    - name: zleader
+      type: git
+      repo: https://github.com/srcdslab/sm-plugin-ZLeader
+      unpack:
+        - source: /addons/sourcemod/scripting/include
+          dest: /addons/sourcemod/scripting/include
+
+    - name: dynamicchannels
+      type: git
+      repo: https://github.com/srcdslab/sm-plugin-DynamicChannels
+      unpack:
+        - source: /scripting/include
+          dest: /addons/sourcemod/scripting/include
+
+    - name: utilshelper
+      type: git
+      repo: https://github.com/srcdslab/sm-plugin-UtilsHelper
+      unpack:
+        - source: /addons/sourcemod/scripting/include
+          dest: /addons/sourcemod/scripting/include
+
+  root: /
+  output: /addons/sourcemod/plugins
+
+  targets:
+    - mapchooser_extended
+    - nominations_extended
+    - rockthevote_extended
+    - mapchooser_extended_sounds
