@@ -14,19 +14,8 @@ jobs:
         with:
           cache: false
 
-      - name: Build sourcemod plugin
-        run: |
-          sourceknight build
-
-      - name: Create package
-        run: |
-          set -euo pipefail
-          mkdir -p /tmp/package/addons/sourcemod/plugins
-          cp addons/sourcemod/plugins/*.smx /tmp/package/addons/sourcemod/plugins/
-          cp -R addons/sourcemod/configs /tmp/package/addons/sourcemod/
-          cp -R addons/sourcemod/translations /tmp/package/addons/sourcemod/
-          mkdir -p /tmp/package/sound
-          cp -R sound/* /tmp/package/sound/
+      - name: Build and package plugin
+        run: sourceknight build --package -o /tmp/package
 
       - name: Upload build archive for test runners
         uses: actions/upload-artifact@v7

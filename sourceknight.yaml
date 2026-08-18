@@ -1,5 +1,5 @@
 project:
-  sourceknight: 0.6
+  sourceknight: 0.7
   name: mapchooser_extended
   dependencies:
     - name: sourcemod
